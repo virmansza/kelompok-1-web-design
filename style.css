@@ -1,0 +1,85 @@
+/* full container */
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/* CSS Untuk Navbar */
+.navbar{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: #B4DDE7;
+    padding: 12px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0 0.2);
+}
+
+.nav-left{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.brand{
+    color:#091F48;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.menu{
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #091F48;
+    transition: 0.3s;
+}
+
+.menu a:hover{
+    color: #67562F;
+}
+
+.search-box{
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.search-box input{
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    width: 180px;
+}
+
+.button{
+    border: none;
+    background: #091F48;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.search-box button:hover{
+    background:#656558;
+}

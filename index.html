@@ -4,8 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Makan Bergizi Gratis - Kelompok 1</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>hello world</p>
+    
+    <!-- navbar -->
+     <nav class="navbar">
+
+        <div class="nav-left">
+            <img src="asset/logo.webp" alt="logo" class="logo">
+            <div class="brand">Makan Bergizi Gratis</div>
+        </div>
+
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="search-box">
+            <input type="text" placeholder="Cari....">
+            <a href="" class="button">Cari</a>
+        </div>
+     </nav>
+
+
+     <!-- section 1 -->
+      <section class="slider">
+        <div class="slide-active" style="background-image: url(asset/slider1.jfif);"></div>
+        <div class="slide" style="background-image: url(asset/slider1.jfif);"></div>
+        <div class="slide" style="background-image: url(asset/slider1.jfif);"></div>
+
+        <div class="overlay"></div>
+
+        <div class="arrow-prev" onclick="changeSlide(-1)">&#10094;</div>
+
+        <div class="narasi1">
+            <h1>Selamat datang di Website program Makanan Bergizi Gratis.</h1>
+            <p></p>
+            <a href="" class="button">Pelajari selengkapnya</a>
+        </div>
+      </section>
+
+     <script src="script.js"></script>
 </body>
 </html>
