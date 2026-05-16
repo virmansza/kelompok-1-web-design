@@ -30,22 +30,50 @@
      </nav>
 
 
+     
      <!-- section 1 -->
-      <section class="slider">
-        <div class="slide-active" style="background-image: url(asset/slider1.jfif);"></div>
-        <div class="slide" style="background-image: url(asset/slider1.jfif);"></div>
-        <div class="slide" style="background-image: url(asset/slider1.jfif);"></div>
+      <section class="slides">
+        <div class="slide active" style="background-image: url('asset/slider1.jpg');"></div>
+        <div class="slide" style="background-image: url('asset/slider2.jpg');"></div>
+        <div class="slide" style="background-image: url('asset/slider3.jpg');"></div>
 
         <div class="overlay"></div>
 
-        <div class="arrow-prev" onclick="changeSlide(-1)">&#10094;</div>
+        <div class="arrow prev" onclick="changeSlide(-1)">&#10094;</div>
 
         <div class="narasi1">
             <h1>Selamat datang di Website program Makanan Bergizi Gratis.</h1>
-            <p></p>
+            <p>perilaku makan makanan sehat dan pola hidup sehat melalui edukasi serta pemberdayaan masyarakat untuk mencapai kualitas hidup yang lebih baik.</p>
             <a href="" class="button">Pelajari selengkapnya</a>
         </div>
+
+        <div class="arrow next" onclick="changeSlide(1)">&#10095;</div>
+
+         <div class="indicators">
+            <div class="indicator active" onclick="goToSlide(0)"></div>
+            <div class="indicator" onclick="goToSlide(1)"></div>
+            <div class="indicator" onclick="goToSlide(2)"></div>
+        </div>
+
       </section>
+
+      <!-- Section 2 -->
+       <section class="about">
+        <div class="about-us">
+            <div class="about-img">
+                <img src="asset/about-img.png" alt=""about-image>
+            </div>
+
+            <div class="about-content">
+            <h2>Tentang Kami</h2>
+            <h3>Bersama membangun kecerdasan bangsa</h3>
+            <p>Program Makan Bergizi Gratis merupakan salah satu upaya pemerintah dalam meningkatkan kualitas sumber daya manusia Indonesia sejak usia dini. Program ini bertujuan untuk memastikan anak-anak, khususnya pelajar, mendapatkan asupan makanan yang sehat, bergizi, dan seimbang setiap harinya.</p>
+            <a href="#" class="button">Learn More</a>
+        </div>
+        </div>
+       </section>
+
+       
 
      <script src="script.js"></script>
 </body>
