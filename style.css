@@ -256,4 +256,90 @@
         .next { right: 5px; }
         }
 
+/* Pengaturan Dasar */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Background halaman putih keabuan */
+    margin: 0;
+}
 
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+/* Header Services */
+.services-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.services-header h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.services-header p {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Grid Layout */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Styling Kartu */
+.service-card {
+    background-color: #212529; /* Warna gelap sesuai gambar */
+    color: #ffffff;
+    padding: 40px 30px;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px); /* Efek melayang saat kursor di atasnya */
+}
+
+/* Styling Konten dalam Kartu */
+.service-card .icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    color: #ced4da;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Tombol Read More */
+.btn-read-more {
+    display: inline-block;
+    background-color: #ffc107; /* Warna kuning emas */
+    color: #212529;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.btn-read-more:hover {
+    background-color: #e0a800;
+}
