@@ -89,7 +89,7 @@
 .slides{
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,7 +101,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(100vh - 70px);
+    height: 90vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -131,7 +131,6 @@
 
 .narasi1 {
     position: absolute;
-
     top: 53%; 
     left: 50%;
     transform: translate(-50%, -50%);
@@ -180,7 +179,7 @@
 
 .indicators {
         position: absolute;
-        bottom: 80px;
+        bottom: 30px;
         left: 50%;
         transform: translateX(-50%);
         display: flex;
@@ -211,9 +210,10 @@
     display: flex;
     align-items: center; 
     justify-content: space-between;
-    gap: 60px;
+    gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
+    margin-bottom: -60px;
 }
 
 .about-img {
@@ -267,12 +267,6 @@
         .next { right: 5px; }
         }
 
-/* Pengaturan Dasar */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa; /* Background halaman putih keabuan */
-    margin: 0;
-}
 
 .container {
     max-width: 1140px;
@@ -280,7 +274,7 @@ body {
     padding: 50px 20px;
 }
 
-/* Header Services */
+
 .services-header {
     text-align: center;
     margin-bottom: 50px;
@@ -288,21 +282,142 @@ body {
 
 .services-header h2 {
     font-size: 2.5rem;
-    color: #333;
+    color: #091F48;
     margin-bottom: 10px;
 }
 
 .services-header p {
-    color: #666;
+    color: #091F48;
     max-width: 600px;
     margin: 0 auto;
 }
 
-/* Grid Layout */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+}
+
+/* Section 4 */
+.stats-section {
+    padding: 80px 8%;
+    background-color: #170742;
+    margin-top: 60px;
+}
+
+.stats-container {
+    max-width: 900px; /* Lebar dibatasi agar teks tidak terlalu memanjang ke kanan */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Jarak antar baris ke bawah */
+}
+
+/* Membagi Kiri dan Kanan */
+.stat-row {
+    display: flex;
+    align-items: center; /* Membuat vertikal sejajar di tengah */
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.stat-left {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Jarak antara ikon dan angka */
+    width: 45%; /* Menjatah 45% ruang untuk area kiri */
+}
+
+.stat-right {
+    width: 55%; /* Menjatah 55% ruang untuk teks penjelasan */
+}
+
+/* --- Animasi Ikon & Lingkaran --- */
+.icon-wrapper {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    flex-shrink: 0; /* Mencegah ikon mengecil jika layar sempit */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rotating-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px dashed #ffc107;
+    border-radius: 50%;
+    animation: putarLingkaran 8s linear infinite;
+}
+
+@keyframes putarLingkaran {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.stat-image {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    z-index: 2;
+}
+
+/* --- Teks Angka & Label Kiri --- */
+.stat-data {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.stat-data h3 {
+    font-size: 40px;
+    color: #ffc107; /* Merah gelap persis seperti gambarmu */
+    margin-bottom: 0px;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.stat-badge {
+    background-color: #ffc107;
+    color: white;
+    padding: 3px 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.stat-label-text {
+    color: #ffc107;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.stat-right p {
+    font-size: 1.1rem;
+    color: #ffc107;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.stat-divider {
+    border: none;
+    border-top: 1px solid #ffc107;
+    margin: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+    .stat-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .stat-left, .stat-right {
+        width: 100%;
+    }
 }
 
 .team-grid {
@@ -380,9 +495,9 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Styling Kartu */
+
 .service-card {
-    background-color: #212529; /* Warna gelap sesuai gambar */
+    background-color: #CAA44D; 
     color: #ffffff;
     padding: 40px 30px;
     text-align: center;
@@ -391,10 +506,9 @@ body {
 }
 
 .service-card:hover {
-    transform: translateY(-10px); /* Efek melayang saat kursor di atasnya */
+    transform: translateY(-10px);
 }
 
-/* Styling Konten dalam Kartu */
 .service-card .icon {
     font-size: 50px;
     margin-bottom: 20px;
@@ -408,24 +522,276 @@ body {
 
 .service-card p {
     font-size: 0.95rem;
-    color: #ced4da;
+    color: #ffffff;
     line-height: 1.6;
     margin-bottom: 25px;
 }
 
-/* Tombol Read More */
-.btn-read-more {
-    display: inline-block;
-    background-color: #ffc107; /* Warna kuning emas */
-    color: #212529;
-    padding: 10px 25px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    transition: background 0.3s;
+.services-section{
+    margin-top: 60px;
 }
 
-.btn-read-more:hover {
-    background-color: #e0a800;
+
+
+.join {
+    background-color: #170742;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    min-height: 400px;
+    margin-bottom: 60px;
+}
+
+.join-us {
+    max-width: 650px;
+    position: relative;
+    z-index: 2;
+}
+
+.join-team {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.join-team h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 40px;
+}
+
+.pattern {
+    position: absolute;
+    top: 50%;
+    right: -120px;
+    transform: translateY(-50%); 
+    height: 90%;
+    max-height: 450px;
+    z-index: 1; 
+    transform: rotate(-90deg);
+}
+
+.join-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 25px;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.join-btn:hover {
+    background-color: white;
+    color: #091F48;
+}
+
+.highlight {
+    color: #dfbd3c; 
+}
+
+@media screen and (max-width: 850px) {
+    .info-section h2 {
+        font-size: 1.6rem;
+    }
+    
+    .pattern {
+        right: -150px;
+        opacity: 0.2; 
+    }
+}
+
+/* ==== MAIN FOOTER STYLING ==== */
+.main-footer {
+    background-color: #B4DDE7;
+    color: #1a1a1a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 60px 8% 20px 8%;
+    border-top: 1px solid #eef2f5;
+    position: relative;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 180px;
+}
+
+/* Judul Kolom */
+.footer-col h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 25px;
+}
+
+/* Daftar Menu Link */
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 15px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #555555;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #0d1b3e;
+}
+
+/* Penanda halaman aktif (misal: Home) */
+.footer-col ul li a.active {
+    color: #120438;
+    font-weight: bold;
+}
+
+/* ==== KELOMPOK MEDIA SOSIAL & KONTAK ==== */
+.footer-contact-col {
+    min-width: 280px;
+    flex: 1.5;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    color: #000000;
+    transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.social-icons svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+}
+
+.contact-title {
+    margin-top: 20px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.9rem;
+    color: #444444;
+    line-height: 1.5;
+}
+
+.contact-icon {
+    width: 18px;
+    height: 18px;
+    color: #555555;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.contact-item a {
+    color: #444444;
+    text-decoration: none;
+}
+
+/* ==== BANNER/TOMBOL WIDGET BANTUAN ==== */
+.footer-widgets {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1200px;
+    margin: 20px auto 0 auto;
+}
+
+.btn-help {
+    background-color: #0c0032;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.close-x {
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+
+/* ==== BAGIAN CREDIT PALING BAWAH ==== */
+.footer-bottom {
+    border-top: 1px solid #eef2f5;
+    margin-top: 30px;
+    padding-top: 25px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.88rem;
+    color: #333333;
+    margin: 0;
+}
+
+/* ==== RESPONSIVE (HP) ==== */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .footer-col {
+        min-width: 100%;
+    }
+    
+    .footer-col h3 {
+        margin-bottom: 15px;
+    }
+    
+    .footer-widgets {
+        justify-content: center;
+        margin-top: 40px;
+    }
 }
