@@ -363,7 +363,6 @@
     padding: 50px 20px;
 }
 
-
 .services-header {
     text-align: center;
     margin-bottom: 50px;
@@ -384,8 +383,73 @@
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    gap: 30px;}
+
+    /* --- CSS BARU UNTUK SLIDER LAYANAN --- */
+
+.services-carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 15px; /* Jarak antara panah dan kotak */
 }
+
+.services-viewport {
+    overflow: hidden; /* Menyembunyikan slide yang tidak aktif */
+    width: 100%;
+}
+
+.services-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Animasi geser yang halus */
+    width: 100%;
+}
+
+.service-slide-group {
+    /* Memaksa setiap grup grid berukuran 100% dari kontainer */
+    min-width: 100%; 
+    flex: 0 0 100%;
+}
+
+.service-arrow {
+    background-color: #091F48;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0;
+}
+
+.service-arrow:hover {
+    background-color: #c49942; /* Warna emas menyesuaikan tema gambar Anda */
+}
+
+/* Penyesuaian responsif di layar kecil */
+@media (max-width: 768px) {
+    .services-carousel {
+        position: relative;
+    }
+    
+    .service-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        opacity: 0.8;
+    }
+
+    .left-arrow { left: -10px; }
+    .right-arrow { right: -10px; }
+}
+
+
 
 /* Section 4 */
 .stats-section {
@@ -400,6 +464,16 @@
     display: flex;
     flex-direction: column;
     gap: 40px; /* Jarak antar baris ke bawah */
+}
+
+.logo-kustom {
+    max-width: 90px;      
+    height: auto;        
+    max-height: 70px;    
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Membagi Kiri dan Kanan */
