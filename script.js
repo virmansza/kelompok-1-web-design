@@ -84,3 +84,25 @@ const observerStatistik = new IntersectionObserver((entries, observer) => {
 if (sectionStatistik) {
     observerStatistik.observe(sectionStatistik);
 }
+
+// --- Script Slider Khusus Services (Layanan) ---
+let indexLayanan = 0;
+
+function geserLayanan(arah) {
+    const track = document.getElementById('layananTrack');
+    const slides = document.querySelectorAll('.service-slide-group');
+    const totalSlides = slides.length;
+
+    // Tambah atau kurangi index
+    indexLayanan += arah;
+
+    // Logika agar slider berputar (loop)
+    if (indexLayanan >= totalSlides) {
+        indexLayanan = 0; // Jika mentok kanan, kembali ke slide pertama
+    } else if (indexLayanan < 0) {
+        indexLayanan = totalSlides - 1; // Jika mentok kiri, pergi ke slide terakhir
+    }
+
+    // Geser elemen track menggunakan persentase
+    track.style.transform = `translateX(-${indexLayanan * 100}%)`;
+}
