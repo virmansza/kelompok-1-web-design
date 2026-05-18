@@ -50,10 +50,14 @@
     text-decoration: none;
     color: #091F48;
     transition: 0.3s;
+    padding-bottom: 6px;
+    border-bottom: 2px solid transparent;
 }
 
-.menu a:hover{
+.menu a:hover,
+.menu a.active {
     color: #67562F;
+    border-bottom: 2px solid #67562F;
 }
 
 .search-box{
@@ -84,6 +88,89 @@
     background:#656558;
 }
 
+
+/* Breadcumbs */
+.page-indicator-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff; /* Dasar background sisi kanan (putih) */
+    width: 100%;
+    height: 220px; /* Mengatur tinggi banner, sesuaikan dengan kenyamanan visual */
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* --- SISI UNGU (KIRI) --- */
+.banner-title-side {
+    background-color: #170742; 
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 60px;
+    border-radius: 0 180px 180px 0; 
+}
+
+/* Teks Penanda Halaman */
+.banner-text {
+    color: #ffffff;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase; /* Memaksa teks menjadi huruf kapital semua */
+    letter-spacing: 1.5px; /* Memberikan jarak antar huruf agar mudah dibaca */
+    text-align: center;
+    margin: 0;
+}
+
+/* --- SISI LOGO (KANAN) --- */
+.banner-logo-side {
+    width: 25%; /* Alokasi ruang untuk logo di sebelah kanan */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px 20px 20px;
+}
+
+/* Pengaturan Ukuran Gambar Logo */
+.banner-brand-logo {
+    max-width: 100%;
+    max-height: 140px; /* Menjaga agar logo tidak terlalu besar raksasa */
+    object-fit: contain; /* Memastikan proporsi logo tidak penyok/gepeng */
+}
+
+/* ==== RESPONSIVE DESIGN (UNTUK LAYAR HP) ==== */
+@media screen and (max-width: 768px) {
+    .page-indicator-banner {
+        flex-direction: column-reverse; /* Logo pindah ke atas, teks ke bawah di HP */
+        height: auto;
+        padding-top: 20px;
+    }
+
+    .banner-title-side {
+        width: 100%;
+        padding: 40px 20px;
+        border-radius: 0; /* Menghilangkan lengkungan di mobile agar teks tidak terpotong */
+        box-shadow: none;
+    }
+
+    .banner-text {
+        font-size: 1.25rem; /* Mengecilkan ukuran huruf di HP agar muat satu baris */
+    }
+
+    .banner-logo-side {
+        width: 100%;
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    .banner-brand-logo {
+        max-height: 90px; /* Logo sedikit lebih kecil di layar HP */
+    }
+}
 
 /* Section 1 */
 .slides{
@@ -268,6 +355,8 @@
         }
 
 
+ /* Section 3 */
+
 .container {
     max-width: 1140px;
     margin: 0 auto;
@@ -366,7 +455,6 @@
     z-index: 2;
 }
 
-/* --- Teks Angka & Label Kiri --- */
 .stat-data {
     display: flex;
     flex-direction: column;
@@ -375,7 +463,7 @@
 
 .stat-data h3 {
     font-size: 40px;
-    color: #ffc107; /* Merah gelap persis seperti gambarmu */
+    color: #ffc107;
     margin-bottom: 0px;
     font-weight: 500;
     line-height: 1.1;
@@ -420,6 +508,7 @@
     }
 }
 
+/* Section 5 */
 .team-grid {
     display: flex;
     flex-wrap: nowrap;
@@ -495,7 +584,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
 .service-card {
     background-color: #CAA44D; 
     color: #ffffff;
@@ -529,9 +617,11 @@
 
 .services-section{
     margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 
+/* Section 6 */
 
 .join {
     background-color: #170742;
@@ -542,7 +632,6 @@
     display: flex;
     align-items: center;
     min-height: 400px;
-    margin-bottom: 60px;
 }
 
 .join-us {
@@ -611,7 +700,7 @@
     }
 }
 
-/* ==== MAIN FOOTER STYLING ==== */
+/* Footer */
 .main-footer {
     background-color: #B4DDE7;
     color: #1a1a1a;
@@ -733,35 +822,6 @@
     text-decoration: none;
 }
 
-/* ==== BANNER/TOMBOL WIDGET BANTUAN ==== */
-.footer-widgets {
-    display: flex;
-    justify-content: flex-end;
-    max-width: 1200px;
-    margin: 20px auto 0 auto;
-}
-
-.btn-help {
-    background-color: #0c0032;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 0.88rem;
-    font-weight: 500;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-.close-x {
-    font-size: 0.75rem;
-    opacity: 0.7;
-}
-
-/* ==== BAGIAN CREDIT PALING BAWAH ==== */
 .footer-bottom {
     border-top: 1px solid #eef2f5;
     margin-top: 30px;
@@ -775,7 +835,6 @@
     margin: 0;
 }
 
-/* ==== RESPONSIVE (HP) ==== */
 @media screen and (max-width: 768px) {
     .footer-container {
         flex-direction: column;
@@ -794,4 +853,89 @@
         justify-content: center;
         margin-top: 40px;
     }
+}
+
+/* Halaman Contact */
+.contact-section {
+    background-color: #eff6fa; 
+    padding: 80px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.contact-header h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.contact-header p {
+    color: #667a8a;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.form-container {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px 18px;
+    background-color: #ffffff;
+    border: 1px solid #e0e6ed;
+    border-radius: 3px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: #333333;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #fabb18; 
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #a0b0bb;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #fabb18;
+    color: #222222;
+    padding: 16px;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 5px;
+}
+
+/* Efek saat tombol di-hover */
+.contact-form button:hover {
+    background-color: #e5a812;
+}
+
+.contact-form button:active {
+    transform: scale(0.98);
 }

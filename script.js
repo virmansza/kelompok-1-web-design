@@ -1,3 +1,4 @@
+// Script Slider
 let currentSlideIndex = 0;
         const slides = document.querySelectorAll('.slide');
         const indicators = document.querySelectorAll('.indicator');
@@ -36,17 +37,14 @@ let currentSlideIndex = 0;
 
 
 
-        // ==== ANIMASI COUNTER BERDASARKAN SCROLL (NATIVE) ====
-
-// 1. Fungsi Utama untuk Menjalankan Perhitungan Angka
+// Script Statistik
 function jalankanCounter(counter) {
     const target = +counter.getAttribute('data-target');
     const suffix = counter.getAttribute('data-suffix') || '+';
     const speed = 100; // Mengatur durasi (100 langkah animasi)
     const inc = target / speed; // Besaran penambahan di setiap langkah
     
-    let angkaSekarang = 0; // KUNCI SOLUSI: Menyimpan angka asli di memori, bukan membaca teks dari layar
-
+    let angkaSekarang = 0; 
     const updateCount = () => {
         angkaSekarang += inc;
 
@@ -63,13 +61,13 @@ function jalankanCounter(counter) {
     updateCount();
 }
 
-// 2. Fungsi Menggunakan Intersection Observer (Mendeteksi Scroll)
+    // Mendeteksi Scroll
 const opsiObserver = {
     root: null, // Menggunakan viewport / layar browser sebagai acuan
     threshold: 0.3 // Animasi baru akan berjalan jika 30% dari section statistik sudah muncul di layar
 };
 
-// Pastikan class ini sesuai dengan tag <section class="stats-section"> di HTML kamu
+    // Pastikan class ini sesuai dengan tag <section class="stats-section"> di HTML kamu
 const sectionStatistik = document.querySelector('.stats-section');
 
 const observerStatistik = new IntersectionObserver((entries, observer) => {
@@ -77,18 +75,12 @@ const observerStatistik = new IntersectionObserver((entries, observer) => {
         // Jika bagian statistik sudah ter-scroll dan masuk ke dalam layar
         if (entry.isIntersecting) {
             const semuaCounter = entry.target.querySelectorAll('.counter');
-            
-            // Jalankan fungsi counter untuk masing-masing angka secara bersamaan
             semuaCounter.forEach(counter => jalankanCounter(counter));
-            
-            // KUNCI SCROLL: Berhenti mengamati section ini agar animasi tidak mengulang-ulang lagi 
-            // setiap kali user melakukan scroll ke atas dan ke bawah
             observer.unobserve(entry.target);
         }
     });
 }, opsiObserver);
 
-// Perintahkan browser untuk mulai mengawasi section statistik
 if (sectionStatistik) {
     observerStatistik.observe(sectionStatistik);
 }
