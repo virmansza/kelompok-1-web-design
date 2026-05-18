@@ -9,7 +9,7 @@
 <body>
     
     <!-- navbar -->
-     <nav class="navbar">
+    <nav class="navbar">
 
         <div class="nav-left">
             <img src="asset/logo.webp" alt="logo" class="logo">
@@ -27,12 +27,10 @@
             <input type="text" placeholder="Cari....">
             <a href="" class="button">Cari</a>
         </div>
-     </nav>
+    </nav>
 
-
-     
 <!-- section 1 -->
-      <section class="slides">
+    <section class="slides">
         <div class="slide active" style="background-image: url('asset/slider1.jpg');"></div>
         <div class="slide" style="background-image: url('asset/slider2.jpg');"></div>
         <div class="slide" style="background-image: url('asset/slider3.jpg');"></div>
@@ -49,16 +47,16 @@
 
         <div class="arrow next" onclick="changeSlide(1)">&#10095;</div>
 
-         <div class="indicators">
+        <div class="indicators">
             <div class="indicator active" onclick="goToSlide(0)"></div>
             <div class="indicator" onclick="goToSlide(1)"></div>
             <div class="indicator" onclick="goToSlide(2)"></div>
         </div>
 
-      </section>
+    </section>
 
 <!-- Section 2 -->
-       <section class="about" id="about">
+    <section class="about" id="about">
         <div class="about-us">
             <div class="about-img">
                 <img src="asset/about-img.png" alt=""about-image>
@@ -71,11 +69,11 @@
             <a href="about.html" class="button">Learn More</a>
         </div>
         </div>
-       </section>
+    </section>
 
 
 <!-- Section 3 -->
-    <section class="services-section">
+    <<section class="services-section">
     <div class="container">
         
         <div class="services-header">
@@ -83,35 +81,72 @@
             <p>Mendukung kesehatan masyarakat melalui program pemenuhan gizi yang terintegrasi dan berkualitas tinggi.</p>
         </div>
 
-        <div class="services-grid">
+        <div class="services-carousel">
             
-            <div class="service-card" id="a">
-                <div class="icon">
-                    <i class="bi bi-stack"></i> </div>
-                <h3>Menu Seimbang</h3>
-                <p>Setiap porsi dirancang khusus oleh ahli gizi untuk memenuhi kebutuhan kalori, protein, dan vitamin harian agar tubuh tetap berenergi sepanjang hari.</p>
-                <a href="" class="button">Read More</a>
+            <button class="service-arrow left-arrow" onclick="geserLayanan(-1)">&#10094;</button>
+
+            <div class="services-viewport">
+                <div class="services-track" id="layananTrack">
+                    
+                    <div class="services-grid service-slide-group">
+                        <div class="service-card" id="a">
+                        <div class="icon">
+                        <img src="logo-section3/logo-seimbang.png" alt="Menu Seimbang" style="width: 200px !important; height: 200px !important; object-fit: contain !important; display: block !important; margin: 0 auto 15px auto !important;">
+                    </div>
+                    <h3>Menu Seimbang</h3>
+                    <p>Setiap porsi dirancang khusus oleh ahli gizi untuk memenuhi kebutuhan kalori, protein, dan vitamin harian agar tubuh tetap berenergi sepanjang hari.</p>
+                </div>
+
+                        <div class="service-card" id="a">
+                            <div class="icon">
+                            <img src="logo-section3/logo-bahan.png" alt="Bahan Lokal Segar" style="width: 200px !important; height: 200px !important; object-fit: contain !important; display: block !important; margin: 0 auto 15px auto !important;">
+                            </div>
+                            <h3>Bahan Lokal Segar</h3>
+                            <p>Kami bekerja sama dengan petani lokal untuk menyediakan bahan masakan organik yang bebas pestisida dan diambil langsung dari hasil panen terbaru.</p>
+                        </div>
+
+                        <div class="service-card" id="a">
+                            <div class="icon">
+                            <img src="logo-section3/logo-higienis.png" alt="Standar Higienis" style="width: 200px !important; height: 200px !important; object-fit: contain !important; display: block !important; margin: 0 auto 15px auto !important;">
+                            </div>
+                            <h3>Standar Higienis</h3>
+                            <p>Proses pengolahan makanan dilakukan di dapur standar tinggi dengan protokol kebersihan ketat untuk menjamin keamanan setiap suapan yang dikonsumsi.</p>
+                        </div>
+                    </div>
+
+                    <div class="services-grid service-slide-group">
+                        <div class="service-card" id="a">
+                            <div class="icon">
+                            <img src="logo-section3/logo-konsul.png" alt="Konsultasi Ahli" style="width: 200px !important; height: 200px !important; object-fit: contain !important; display: block !important; margin: 0 auto 15px auto !important;">
+                            </div>
+                            <h3>Konsultasi Ahli</h3>
+                            <p>Dapatkan pendampingan langsung dari ahli gizi profesional kami untuk menyesuaikan pola makan yang paling tepat dengan kondisi kesehatan Anda.</p>
+                        </div>
+
+                        <div class="service-card" id="a">
+                            <div class="icon">
+                            <img src="logo-section3/logo-cepat.png" alt="Konsultasi Ahli" style="width: 200px !important; height: 200px !important; object-fit: contain !important; display: block !important; margin: 0 auto 15px auto !important;">
+                            </div>
+                            <h3>Pengiriman Cepat</h3>
+                            <p>Sistem logistik kami dirancang untuk memastikan makanan tiba di lokasi Anda tepat waktu dengan kondisi suhu yang tetap terjaga kelayakannya.</p>
+                        </div>
+
+                        <div class="service-card" id="a">
+                            <div class="icon">
+                            <img src="logo-section3/logo-ramah.png" alt="Konsultasi Ahli" style="width: 200px !important; height: 200px !important; object-fit: contain !important; display: block !important; margin: 0 auto 15px auto !important;">
+                            </div>
+                            <h3>Ramah Lingkungan</h3>
+                            <p>Kemasan yang kami gunakan 100% dapat didaur ulang sebagai komitmen kami untuk menjaga kelestarian lingkungan dan mengurangi limbah plastik.</p>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
 
-            <div class="service-card">
-                <div class="icon">
-                    <i class="bi bi-slack"></i>
-                </div>
-                <h3>Bahan Lokal Segar</h3>
-                <p>Kami bekerja sama dengan petani lokal untuk menyediakan bahan masakan organik yang bebas pestisida dan diambil langsung dari hasil panen terbaru.</p>
-                <a href="#" class="button">Read More</a>
-            </div>
-
-            <div class="service-card">
-                <div class="icon">
-                    <i class="bi bi-playstation"></i>
-                </div>
-                <h3>Standar Higienis</h3>
-                <p>Proses pengolahan makanan dilakukan di dapur standar tinggi dengan protokol kebersihan ketat untuk menjamin keamanan setiap suapan yang dikonsumsi.</p>
-                <a href="#" class="button">Read More</a>
-            </div>
+            <button class="service-arrow right-arrow" onclick="geserLayanan(1)">&#10095;</button>
 
         </div>
+
     </div>
 </section>
 
@@ -321,6 +356,6 @@
     </div>
 </footer>
 
-     <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
