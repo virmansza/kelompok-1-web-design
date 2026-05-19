@@ -6,6 +6,9 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+body {
+    background-color: #eff6fa;
+}
 
 /* CSS Untuk Navbar */
 .navbar{
@@ -142,35 +145,6 @@
     object-fit: contain; /* Memastikan proporsi logo tidak penyok/gepeng */
 }
 
-/* ==== RESPONSIVE DESIGN (UNTUK LAYAR HP) ==== */
-@media screen and (max-width: 768px) {
-    .page-indicator-banner {
-        flex-direction: column-reverse; /* Logo pindah ke atas, teks ke bawah di HP */
-        height: auto;
-        padding-top: 20px;
-    }
-
-    .banner-title-side {
-        width: 100%;
-        padding: 40px 20px;
-        border-radius: 0; /* Menghilangkan lengkungan di mobile agar teks tidak terpotong */
-        box-shadow: none;
-    }
-
-    .banner-text {
-        font-size: 1.25rem; /* Mengecilkan ukuran huruf di HP agar muat satu baris */
-    }
-
-    .banner-logo-side {
-        width: 100%;
-        height: auto;
-        padding: 10px 20px;
-    }
-
-    .banner-brand-logo {
-        max-height: 90px; /* Logo sedikit lebih kecil di layar HP */
-    }
-}
 
 /* Section 1 */
 .slides{
@@ -334,27 +308,6 @@
     text-align: justify;
 }
 
-
-@media screen and (max-width: 850px) {
-    .about-us {
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
-    }
-
-    .services-content p {
-        text-align: center;
-    }
-}
-@media (max-width: 768px) {
-        .narasi1 h1 { font-size: 2.2rem; }
-        .narasi1 p { font-size: 0.95rem; }
-        .arrow { font-size: 1.8rem; padding: 10px; }
-        .prev { left: 5px; }
-        .next { right: 5px; }
-        }
-
-
  /* Section 3 */
 
 .container {
@@ -430,26 +383,6 @@
 .service-arrow:hover {
     background-color: #c49942; /* Warna emas menyesuaikan tema gambar Anda */
 }
-
-/* Penyesuaian responsif di layar kecil */
-@media (max-width: 768px) {
-    .services-carousel {
-        position: relative;
-    }
-    
-    .service-arrow {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 10;
-        opacity: 0.8;
-    }
-
-    .left-arrow { left: -10px; }
-    .right-arrow { right: -10px; }
-}
-
-
 
 /* Section 4 */
 .stats-section {
@@ -570,18 +503,6 @@
     margin: 0;
 }
 
-
-@media screen and (max-width: 768px) {
-    .stat-row {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .stat-left, .stat-right {
-        width: 100%;
-    }
-}
-
 /* Section 5 */
 .team-grid {
     display: flex;
@@ -628,16 +549,6 @@
 .team-grid .team-img-container {
     position: relative;
     z-index: 2;
-}
-
-@media screen and (max-width: 1024px) {
-    .team-grid {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .team-grid .service-card {
-        flex: 1 0 25%;
-    }
 }
 
 .team-img-container {
@@ -761,17 +672,6 @@
 
 .highlight {
     color: #dfbd3c; 
-}
-
-@media screen and (max-width: 850px) {
-    .info-section h2 {
-        font-size: 1.6rem;
-    }
-    
-    .pattern {
-        right: -150px;
-        opacity: 0.2; 
-    }
 }
 
 /* Footer */
@@ -909,31 +809,10 @@
     margin: 0;
 }
 
-@media screen and (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        gap: 40px;
-    }
-    
-    .footer-col {
-        min-width: 100%;
-    }
-    
-    .footer-col h3 {
-        margin-bottom: 15px;
-    }
-    
-    .footer-widgets {
-        justify-content: center;
-        margin-top: 40px;
-    }
-}
-
 /* Halaman Contact */
 .contact-section {
     background-color: #eff6fa; 
     padding: 80px 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }
 
@@ -992,24 +871,198 @@
     resize: vertical;
 }
 
-.contact-form button {
-    background-color: #fabb18;
-    color: #222222;
-    padding: 16px;
+/* Halaman Berita */
+
+.news-container {
+    max-width: 900px;
+    margin: 40px auto; /* Memposisikan kontainer di tengah layar */
+    margin-top: 80px;
+    margin-bottom:80px;
+    padding: 0 20px;
+}
+
+.news-item {
+    margin-bottom: 30px;
+}
+
+.news-layout {
+    display: flex;
+    gap: 25px; 
+    align-items: flex-start;
+    margin-bottom: 25px; 
+}
+
+
+.news-image-box {
+    flex: 0 0 250px;
+}
+
+.news-thumbnail {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+.news-title {
+    margin: 0 0 10px 0;
+    font-size: 1.4rem;
+    color: #091F48;
+}
+
+.news-desc {
+    margin: 0 0 15px 0;
+    color: #555555;
+    line-height: 1.6;
+}
+
+.news-divider {
     border: none;
-    border-radius: 3px;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.1s ease;
-    margin-top: 5px;
+    border-top: 1.5px solid #e0e0e0;
 }
 
-/* Efek saat tombol di-hover */
-.contact-form button:hover {
-    background-color: #e5a812;
+/* ==== RESPONSIVE DESIGN (LAYAR HP) ==== */
+
+@media screen and (max-width: 768px) {
+    .page-indicator-banner {
+        flex-direction: column-reverse; /* Logo pindah ke atas, teks ke bawah di HP */
+        height: auto;
+        padding-top: 20px;
+    }
+
+    .banner-title-side {
+        width: 100%;
+        padding: 40px 20px;
+        border-radius: 0; /* Menghilangkan lengkungan di mobile agar teks tidak terpotong */
+        box-shadow: none;
+    }
+
+    .banner-text {
+        font-size: 1.25rem; /* Mengecilkan ukuran huruf di HP agar muat satu baris */
+    }
+
+    .banner-logo-side {
+        width: 100%;
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    .banner-brand-logo {
+        max-height: 90px; /* Logo sedikit lebih kecil di layar HP */
+    }
 }
 
-.contact-form button:active {
-    transform: scale(0.98);
+
+@media screen and (max-width: 850px) {
+    .about-us {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .services-content p {
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+        .narasi1 h1 { font-size: 2.2rem; }
+        .narasi1 p { font-size: 0.95rem; }
+        .arrow { font-size: 1.8rem; padding: 10px; }
+        .prev { left: 5px; }
+        .next { right: 5px; }
+        }
+
+@media (max-width: 768px) {
+    .services-carousel {
+        position: relative;
+    }
+    
+    .service-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        opacity: 0.8;
+    }
+
+    .left-arrow { left: -10px; }
+    .right-arrow { right: -10px; }
+}
+
+@media (max-width: 768px) {
+    .services-carousel {
+        position: relative;
+    }
+    
+    .service-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        opacity: 0.8;
+    }
+
+    .left-arrow { left: -10px; }
+    .right-arrow { right: -10px; }
+}
+
+@media screen and (max-width: 1024px) {
+    .team-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .team-grid .service-card {
+        flex: 1 0 25%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .info-section h2 {
+        font-size: 1.6rem;
+    }
+    
+    .pattern {
+        right: -150px;
+        opacity: 0.2; 
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .footer-col {
+        min-width: 100%;
+    }
+    
+    .footer-col h3 {
+        margin-bottom: 15px;
+    }
+    
+    .footer-widgets {
+        justify-content: center;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .news-layout {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .news-image-box {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+
+    .news-thumbnail {
+        height: auto; 
+        aspect-ratio: 16/9;
+    }
 }
