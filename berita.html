@@ -8,8 +8,7 @@
 </head>
 <body>
     
-    <!-- navbar -->
-     <nav class="navbar">
+    <nav class="navbar">
 
         <div class="nav-left">
             <img src="asset/logo.webp" alt="logo" class="logo">
@@ -23,16 +22,20 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
 
-        <div class="search-box">
-            <input type="text" placeholder="Cari....">
-            <a href="" class="button">Cari</a>
+        <div class="search-box" style="position: relative;"> 
+            <div class="search-input-wrapper">
+                <input type="text" id="searchInput" placeholder="Cari...." autocomplete="off">
+                <button type="button" id="searchBtn" class="button">Cari</button>
+            </div>
+    
+            <div id="searchSuggestions" class="search-suggestions"></div>
         </div>
      </nav>
 
 <section class="page-indicator-banner">
     
     <div class="banner-title-side">
-        <h1 class="banner-text">Dapatkan Informasi Teraru Mengenai Program Makan Bergizi Gratis</h1>
+        <h1 class="banner-text">Dapatkan Informasi Terbaru Mengenai Program Makan Bergizi Gratis</h1>
     </div>
 
     <div class="banner-logo-side">
@@ -50,9 +53,9 @@
             </div>
 
             <div class="news-text-box">
-                <h3 class="news-title">Dari Dapur ke Bangku Kuliah: Cara Bulqis, Relawan SPPG Menjemput Masa Depan</h3>
-                <p class="news-desc">16 Mei 2026 - Langit di Makassar masih gelap ketika Bulqis sudah memulai harinya. Jam menunjukkan pukul 04.00 WITA. Di saat sebagian orang masih terlelap, ia sudah berdiri di dapur Satuan Pelayanan Pemenuhan Gizi (SPPG) Biringkanaya 03.</p>
-                <a href="https://bgn.go.id/news/artikel/dari-dapur-ke-bangku-kuliah-cara-bulqis-relawan-sppg-menjemput-masa-depan" class="button">Baca Selengkapnya</a>
+                <h3 class="news-title">1.152 SPPG Masih Disetop Sementara dari total 4.581, Kepala BGN Tegaskan Tidak Ada Kompromi untuk Standar MBG</h3>
+                <p class="news-desc">25 Mei 2026 - Badan Gizi Nasional (BGN) terus memperkuat pengawasan dan peningkatan kualitas pelaksanaan Program Makan Bergizi Gratis (MBG) di seluruh Indonesia. Langkah ini dilakukan sebagai tindak lanjut Instruksi Presiden terkait peningkatan kualitas layanan dan keamanan program bagi masyarakat, khususnya peserta didik penerima manfaat MBG.</p>
+                <a href="https://bgn.go.id/news/siaran-pers/1152-sppg-masih-disetop-sementara-dari-total-4581-kepala-bgn-tegaskan-tidak-ada-kompromi-untuk-standar-mbg" class="button">Baca Selengkapnya</a>
             </div>
         </div>
         <hr class="news-divider">
@@ -61,27 +64,13 @@
     <article class="news-item">
         <div class="news-layout">
             <div class="news-image-box">
-                <img src="asset/berita-4.png" alt="Gambar Berita" class="news-thumbnail">
+                <img src="asset/berita-2.png" alt="Gambar Berita" class="news-thumbnail">
             </div>
 
             <div class="news-text-box">
-                <h3 class="news-title">BGN Laporkan 20 SPPG di NTT-NTB Terdampak Kelangkaan Elpiji, Pertamina Patra Niaga Gerak Cepat Isi Pasokan</h3>
-                <p class="news-desc">13 Mei 2026 - Kelangkaan gas elpiji 12 kilogram (kg) yang sempat mengganggu operasional sejumlah Satuan Pelayanan Pemenuhan Gizi (SPPG) Program Makan Bergizi Gratis (MBG) di wilayah Nusa Tenggara Timur (NTT) dan Nusa Tenggara Barat (NTB) mulai mendapatkan solusi.</p>
-                <a href="https://bgn.go.id/news/siaran-pers/bgn-laporkan-20-sppg-di-ntt-ntb-terdampak-kelangkaan-elpiji-pertamina-patra-niaga-gerak-cepat-isi-pasokan" class="button">Baca Selengkapnya</a>
-            </div>
-        </div>
-        <hr class="news-divider">
-    </article>
-
-    <article class="news-item">
-        <div class="news-layout">
-            <div class="news-image-box">
-                <img src="asset/berita-2.jpg" alt="Gambar Berita" class="news-thumbnail">
-            </div>
-            <div class="news-text-box">
-                <h3 class="news-title">Ayam Katsu dan Sepotong Semangat: Cerita Kecil Daniel di Balik Program MBG</h3>
-                <p class="news-desc">2 Mei 2026 - Pagi di SDN Jogjogan 01 selalu dimulai dengan langkah-langkah kecil yang penuh semangat. Anak-anak datang dengan seragam rapi, menyimpan harapan sederhana untuk menjalani hari di sekolah.</p>
-                <a href="https://bgn.go.id/news/artikel/dari-dapur-ke-bangku-kuliah-cara-bulqis-relawan-sppg-menjemput-masa-depan" class="button">Baca Selengkapnya</a>
+                <h3 class="news-title">Menembus Malam dan Jalan Berliku, Perjuangan Yuli Menjadi Relawan SPPG di Samigaluh</h3>
+                <p class="news-desc">24 Mei 2026 - Saat sebagian besar warga Samigaluh terlelap, Wefi Yuliani atau Yuli justru memulai perjalanannya. Pukul sebelas malam, perempuan 42 tahun itu menghidupkan sepeda motor tuanya, menuruni jalan berliku di kawasan perbukitan Samigaluh, Kulon Progo. Dingin malam, gerimis, hingga ancaman longsor di tepi jalan menjadi bagian dari rutinitas yang ia jalani demi menjalankan tugas sebagai relawan dapur Satuan Pelayanan Pemenuhan Gizi (SPPG) 01 Samigaluh.</p>
+                <a href="https://bgn.go.id/news/artikel/menembus-malam-dan-jalan-berliku-perjuangan-yuli-menjadi-relawan-sppg-di-samigaluh" class="button">Baca Selengkapnya</a>
             </div>
         </div>
         <hr class="news-divider">
@@ -93,9 +82,23 @@
                 <img src="asset/berita-3.png" alt="Gambar Berita" class="news-thumbnail">
             </div>
             <div class="news-text-box">
-                <h3 class="news-title">Program MBG dan SPPG Jadi Penopang Hidup Relawan yang Rawat Anak Disabilitas</h3>
-                <p class="news-desc">16 April 2026 - Putri merupakan ibu dari tiga anak, di mana anak pertamanya merupakan penyandang disabilitas berusia hampir 11 tahun. Ia juga pernah kehilangan anak keduanya yang meninggal saat berusia tiga bulan, sementara anak bungsunya kini masih balita.</p>
-                <a href="https://bgn.go.id/news/artikel/program-mbg-dan-sppg-jadi-penopang-hidup-relawan-yang-rawat-anak-disabilitas" class="button">Baca Selengkapnya</a>
+                <h3 class="news-title">Wakil Kepala BGN Sony Sonjaya Luncurkan Aplikasi Reviu Menu MBG untuk Perkuat Pengawasan Kualitas Makanan</h3>
+                <p class="news-desc">24 Mei 2026 - Wakil Kepala Badan Gizi Nasional (BGN) Sony Sonjaya mengungkapkan langkah baru BGN dalam memperkuat pengawasan kualitas Program Makan Bergizi Gratis (MBG) melalui pengembangan aplikasi Reviu Menu MBG (Organoleptik). Sistem tersebut dikembangkan untuk meningkatkan perhatian, kepedulian, dan kewaspadaan seluruh Kepala SPPG serta mitra BGN dalam menjaga mutu makanan yang diterima para penerima manfaat.</p>
+                <a href="https://bgn.go.id/news/siaran-pers/wakil-kepala-bgn-sony-sonjaya-luncurkan-aplikasi-reviu-menu-mbg-untuk-perkuat-pengawasan-kualitas-makanan" class="button">Baca Selengkapnya</a>
+            </div>
+        </div>
+        <hr class="news-divider">
+    </article>
+
+    <article class="news-item">
+        <div class="news-layout">
+            <div class="news-image-box">
+                <img src="asset/berita-4.png" alt="Gambar Berita" class="news-thumbnail">
+            </div>
+            <div class="news-text-box">
+                <h3 class="news-title">Dari Tungku Kayu Bakar, Tempe Khoiri Kini Menghidupi Tiga Dapur MBG</h3>
+                <p class="news-desc">24 April 2026 - Pagi belum benar-benar datang ketika asap tipis mulai mengepul dari tungku kayu bakar di rumah produksi milik Khoiri Rosyidin. Di sudut ruangan sederhana itu, pria 40 tahun tersebut sibuk mengaduk dan mencuci kedelai dalam dandang besar, sementara istrinya, Sisika, menyiapkan tahapan produksi berikutnya.</p>
+                <a href="https://bgn.go.id/news/artikel/dari-tungku-kayu-bakar-tempe-khoiri-kini-menghidupi-tiga-dapur-mbg" class="button">Baca Selengkapnya</a>
             </div>
         </div>
         <hr class="news-divider">
@@ -106,11 +109,11 @@
 
 
 
-<!-- Footer -->
 <footer class="main-footer">
     <div class="footer-container">
         
         <div class="footer-col">
+            max-width: 1200px;
             <h3>Navigasi</h3>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -141,7 +144,7 @@
             <h3>Media Sosial</h3>
             <div class="social-icons">
                 <a href="https://www.facebook.com/people/Bgn-RI/61571105639452/"><svg viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a>
-                <a href="https://www.instagram.com/badangizinasional.ri"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                <a href="https://www.instagram.com/badangizinasional.ri"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069(4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
                 <a href="https://bgn.go.id/coming-soon"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
             </div>
 
