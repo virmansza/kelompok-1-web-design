@@ -8,7 +8,6 @@
 </head>
 <body>
     
-    <!-- navbar -->
     <nav class="navbar">
 
         <div class="nav-left">
@@ -23,14 +22,17 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
 
-        <div class="search-box">
-            <input type="text" placeholder="Cari....">
-            <a href="" class="button">Cari</a>
+        <div class="search-box" style="position: relative;"> 
+            <div class="search-input-wrapper">
+                <input type="text" id="searchInput" placeholder="Cari...." autocomplete="off">
+                <button type="button" id="searchBtn" class="button">Cari</button>
+            </div>
+    
+            <div id="searchSuggestions" class="search-suggestions"></div>
         </div>
     </nav>
 
-<!-- section 1 -->
-    <section class="slides">
+<section class="slides">
         <div class="slide active" style="background-image: url('asset/slider1.jpg');"></div>
         <div class="slide" style="background-image: url('asset/slider2.jpg');"></div>
         <div class="slide" style="background-image: url('asset/slider3.jpg');"></div>
@@ -55,25 +57,23 @@
 
     </section>
 
-<!-- Section 2 -->
-    <section class="about" id="about">
+<section class="about" id="about">
         <div class="about-us">
             <div class="about-img">
-                <img src="asset/about-img.png" alt=""about-image>
+                <img src="asset/about-img.png" alt="about-image">
             </div>
 
             <div class="about-content">
             <h2>Tentang Kami</h2>
             <h3>Bersama membangun kecerdasan bangsa</h3>
-            <p>Program Makan Bergizi Gratis merupakan salah satu upaya pemerintah dalam meningkatkan kualitas sumber daya manusia Indonesia sejak usia dini. Program ini bertujuan untuk memastikan anak-anak, khususnya pelajar, mendapatkan asupan makanan yang sehat, bergizi, dan seimbang setiap harinya.</p>
+            <p>Program Makan Bergizi Gratis merupakan salah satu upaya pemerintah dalam meningkatkan kualitas sumber daya manusia Indonesia sejak usia dini. Program ini bertujuan untuk memastikan anak-anak, khususnya pelajar, mendapatkan asupan makanan yang sehat, bergizi, and seimbang setiap harinya.</p>
             <a href="about.html" class="button">Learn More</a>
         </div>
         </div>
     </section>
 
 
-<!-- Section 3 -->
-    <<section class="services-section">
+<section class="services-section">
     <div class="container">
         
         <div class="services-header">
@@ -150,7 +150,6 @@
     </div>
 </section>
 
-<!-- Section 4 -->
 <section class="stats-section">
     <div class="stats-container">
         
@@ -210,7 +209,6 @@
 </section>
 
 
-<!-- Section 5 -->
 <section class="services-section our-team">
     <div class="container">
         
@@ -226,7 +224,7 @@
                 </div>
                 <h3>Hafidz</h3>
                 <p>Sebagai ahli gizi, Hafidz bertanggung jawab untuk merancang menu yang seimbang dan bergizi untuk setiap porsi makanan.</p>
-                <a href="https://pddikti.kemdiktisaintek.go.id/detail-mahasiswa/8ebKDSmpFqUJm-RJZPmfowa6LlS5GetBM-9036mI3YmNTal9BFNWQtPTyPItvK2vR6oKLw==" class="button">Read More</a>
+                <a href="https://pddikti.kemdiktisaintek.go.id/detail-mahasiswa/8ebKDSmpFqUJm-RJZPmfowa6LlS5GetBM-9036mI3YmNTal9BFNWQtPTyPItvK2vR6oKLw==" class="button btn-read-more">Read More</a>
             </div>
 
             <div class="service-card" style="--bg-image: url('asset/syarif.jpg');">
@@ -235,7 +233,7 @@
                 </div>
                 <h3>Syarif</h3>
                 <p>Syarif adalah koki profesional dengan pengalaman bertahun-tahun dalam memasak makanan bergizi dan lezat.</p>
-                <a href="https://pddikti.kemdiktisaintek.go.id/detail-mahasiswa/lgGlSXzGm2cTaGz5Em7IbZfX4yXIszO3fMPpHwW7_EW6CIdVqjfu1FuwpdAcrt1gsZ7ttg==" class="button">Read More</a>
+                <a href="https://pddikti.kemdiktisaintek.go.id/detail-mahasiswa/lgGlSXzGm2cTaGz5Em7IbZfX4yXIszO3fMPpHwW7_EW6CIdVqjfu1FuwpdAcrt1gsZ7ttg==" class="button btn-read-more">Read More</a>
             </div>
 
             <div class="service-card" style="--bg-image: url('asset/jaris.jpg');">
@@ -244,7 +242,7 @@
                 </div>
                 <h3>Jaris</h3>
                 <p>Jaris adalah relawan yang bersemangat untuk memberikan kontribusi positif bagi masyarakat.</p>
-                <a href="https://pddikti.kemdiktisaintek.go.id/detail-mahasiswa/pcctqbDuymudhcVZLt_FTEHTPywBHOnmzhRIR5Uo8aYj7BiXkUDnBTpvnMY2FX87-F6FzQ==" class="button">Read More</a>
+                <a href="https://pddikti.kemdiktisaintek.go.id/detail-mahasiswa/pcctqbDuymudhcVZLt_FTEHTPywBHOnmzhRIR5Uo8aYj7BiXkUDnBTpvnMY2FX87-F6FzQ==" class="button btn-read-more">Read More</a>
             </div>
 
             <div class="service-card" style="--bg-image: url('asset/Yurcel.jpg');">
@@ -253,7 +251,7 @@
                 </div>
                 <h3>Masacio</h3>
                 <p>Masacio adalah asisten koki profesional dengan pengalaman bertahun-tahun dalam memasak makanan bergizi dan lezat.</p>
-                <a href="https://pddikti.kemdiktisaintek.go.id/detail-mahasiswa/cQgYpAVDwypOQ1x6PCjSr96KI7GmzjTegLy8U5TcY7m2gwCGobo03Mu_mZKbDhXs7pFV0A==" class="button">Read More</a>
+                <a href="https://pddikti.kemdiktisaintek.go.id/detail-mahasiswa/cQgYpAVDwypOQ1x6PCjSr96KI7GmzjTegLy8U5TcY7m2gwCGobo03Mu_mZKbDhXs7pFV0A==" class="button btn-read-more">Read More</a>
             </div>
 
             <div class="service-card" style="--bg-image: url('asset/Irfan.jpg');">
@@ -262,7 +260,7 @@
                 </div>
                 <h3>Irfan</h3>
                 <p>Irfan adalah anggota tim yang bersemangat dan berdedikasi untuk memberikan kontribusi positif bagi masyarakat.</p>
-                <a href="https://pddikti.kemdiktisaintek.go.id/detail-mahasiswa/bEgleD9y5xLJKfDmQQZ1R6wR6_g82VIsQQDYUKq7kYOiia9TzPPJckq__JtyIzSyOZTbrw==" class="button">Read More</a>
+                <a href="https://pddikti.kemdiktisaintek.go.id/detail-mahasiswa/bEgleD9y5xLJKfDmQQZ1R6wR6_g82VIsQQDYUKq7kYOiia9TzPPJckq__JtyIzSyOZTbrw==" class="button btn-read-more">Read More</a>
             </div>
 
         </div>
@@ -270,7 +268,6 @@
 </section>
 
 
-<!-- Section 6 -->
 <section class="join">
     
     <div class="join-us">
@@ -290,7 +287,6 @@
 </section>
 
 
-<!-- Footer -->
 <footer class="main-footer">
     <div class="footer-container">
         
@@ -356,6 +352,6 @@
     </div>
 </footer>
 
-    <script src="script.js"></script>
+     <script src="script.js"></script>
 </body>
 </html>
